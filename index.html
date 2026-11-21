@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5ef">
+<title>Una sorpresa para Lesly 💗</title>
+<style>
+  :root { --pink:#f7a9c4; --deep:#a94370; --cream:#fff9f4; --ink:#63394b; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; overflow-x:hidden; color:var(--ink);
+    font-family: "Trebuchet MS", system-ui, sans-serif;
+    background: radial-gradient(circle at top left,#fff 0,#ffeaf2 42%,#ffd9e7 100%);
+    display:flex; align-items:center; justify-content:center; padding:28px 16px;
+  }
+  .sparkle { position:fixed; color:#e98bad; opacity:.65; animation: float 5s ease-in-out infinite; pointer-events:none; }
+  .s1{top:8%;left:8%;font-size:25px}.s2{top:17%;right:9%;font-size:32px;animation-delay:1s}
+  .s3{bottom:12%;left:12%;font-size:28px;animation-delay:2s}.s4{bottom:8%;right:12%;font-size:22px;animation-delay:.5s}
+  @keyframes float { 50%{transform:translateY(-15px) rotate(12deg)} }
+  .wrap { width:min(100%,760px); text-align:center; position:relative; }\n
+  .cover { width:100%; height:auto; max-height:clamp(110px, 34vw, 250px); object-fit:contain; display:block; border-radius:20px; box-shadow:0 12px 32px #b84e7825; margin:0 auto 22px; border:1px solid #f4c3d3; background:#fff4f6; }
+
+  .eyebrow { letter-spacing:.18em; text-transform:uppercase; color:#b45d80; font-size:.72rem; font-weight:800; }
+  h1 { font-family: Georgia,serif; font-size:clamp(2.5rem,10vw,4.3rem); line-height:1; margin:12px 0 8px; color:var(--deep); }
+  .subtitle { margin:0 auto 22px; max-width:390px; line-height:1.6; color:#81566a; }
+  .hint { font-size:.9rem; color:#9c5875; margin:16px 0 0; }
+  .envelope-area { perspective:1000px; margin:24px auto 0; width:min(100%,390px); height:260px; cursor:pointer; outline:none; }
+  .envelope { position:relative; width:100%; height:220px; margin-top:30px; filter:drop-shadow(0 16px 18px #c96f9250); }
+  .back { position:absolute; inset:0; background:#e98eae; border-radius:12px; }
+  .letter { position:absolute; left:7%; width:86%; height:178px; bottom:12px; background:#fffdfb; border-radius:9px; padding:20px 18px; transition:transform .8s ease; z-index:2; box-shadow:0 3px 10px #9f49621c; }
+  .letter strong { display:block; font-family:Georgia,serif; font-size:1.35rem; color:#b94e79; margin-bottom:8px; }
+  .letter span { font-size:.88rem; line-height:1.5; }
+  .front { position:absolute; inset:0; z-index:3; background:linear-gradient(145deg,#f7b4ca,#e77fa5); clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%); border-radius:0 0 12px 12px; }
+  .flap { position:absolute; inset:0 0 auto; height:62%; z-index:4; transform-origin:top; transition:transform .7s ease; background:#fbd0de; clip-path:polygon(0 0,100% 0,50% 100%); border-radius:12px 12px 0 0; }
+  .seal { position:absolute; z-index:5; top:47%; left:50%; transform:translate(-50%,-50%); width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#fff1f6;color:#c34f7c;font-size:23px;box-shadow:0 3px 9px #a9437040;transition:opacity .25s; }
+  .open .flap { transform:rotateX(180deg); z-index:1; }
+  .open .letter { transform:translateY(-118px); }
+  .open .seal { opacity:0; }
+  .card { display:none; background:#fffaf7eF; border:1px solid #f7c6d7; border-radius:22px; padding:26px 24px; box-shadow:0 14px 40px #b84e7820; text-align:left; animation:rise .65s ease both; }
+  .card.show { display:block; }
+  @keyframes rise { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  .card h2 { font: bold 1.9rem Georgia,serif; text-align:center; color:var(--deep); margin:0 0 16px; }
+  .card p { line-height:1.75; margin:0 0 13px; }
+  .donut-row { display:flex; justify-content:center; gap:12px; font-size:2rem; margin:12px 0 18px; }
+  .sign { text-align:center; color:#a64d73; font-family:Georgia,serif; font-style:italic; font-size:1.1rem; margin-top:18px; }
+  button { border:0; border-radius:999px; padding:12px 20px; background:#c95783; color:white; font-weight:800; font-size:.95rem; cursor:pointer; box-shadow:0 6px 15px #c9578340; }
+  button:hover { background:#ad3e6b; transform:translateY(-1px); }
+  .again { display:block; margin:20px auto 0; }
+  .footer { margin-top:22px; font-size:.75rem; color:#a66b83; }
+  @media(max-width:600px){
+    body { padding:18px 12px; }
+    .wrap { width:100%; }
+    .cover { border-radius:14px; margin-bottom:18px; max-height:34vw; }
+    .subtitle { font-size:.95rem; }
+    .card { padding:22px 18px; }
+  }
+  @media(max-width:420px){ .envelope-area{height:245px}.envelope{height:205px}.letter{height:168px;padding:17px 14px}.open .letter{transform:translateY(-108px)} }
+</style>
+
+<meta name="description" content="Una pequeña sorpresa de cumpleaños para Lesly: una carta hecha con cariño y donitas.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Una sorpresa para Lesly">
+<meta property="og:title" content="¡Feliz cumpleaños, Lesly! 💗">
+<meta property="og:description" content="Una pequeña sorpresa de cumpleaños, hecha con cariño y un toque de azúcar. 🍩">
+<meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portada de cumpleaños con flores y globos de corazón">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¡Feliz cumpleaños, Lesly! 💗">
+<meta name="twitter:description" content="Una pequeña sorpresa de cumpleaños, hecha con cariño y un toque de azúcar. 🍩">
+<meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/portada.jpg">
+
+</head>
+<body>
+  <span class="sparkle s1">✦</span><span class="sparkle s2">♡</span>
+  <span class="sparkle s3">✧</span><span class="sparkle s4">♡</span>
+  <main class="wrap">
+<div class="eyebrow">Una pequeña sorpresa para ti</div>
+    <h1>¡Feliz cumpleaños,<br>Lesly!</h1>
+    <p class="subtitle">Un detallito para celebrar tu día. Hay una cartita esperándote… 💌</p>
+
+    <div class="envelope-area" id="envelopeArea" role="button" tabindex="0" aria-label="Abrir la carta de cumpleaños">
+      <div class="envelope" id="envelope">
+        <div class="back"></div>
+        <div class="letter">
+          <strong>Para Lesly 💗</strong>
+          <span>Con cariño, en tu día especial…</span>
+        </div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <div class="seal">♡</div>
+      </div>
+    </div>
+    <p class="hint" id="hint">Toca el sobre para abrir tu sorpresa ✨</p>
+
+    <section class="card" id="card" aria-live="polite">
+      <h2>Un día muy especial 🌷</h2>
+      <div class="donut-row" aria-label="Donas">🍩 🍩 🍩</div>
+      <p>¡Feliz cumpleaños, Lesly! 🎂</p>
+      <p>Aunque nos conocemos desde hace poquito, me alegra haberte conocido desde que comenzaron las clases. A veces una amistad empieza sin planearlo, y qué bonito es coincidir con personas que hacen más agradables los días.</p>
+      <p>Espero que hoy la pases súper bien, que sonrías muchísimo y que este nuevo año de vida te traiga cosas lindas, momentos inolvidables y, por supuesto, ¡muchas donas! 🍩💗</p>
+      <p>Que nunca te falten motivos para ser feliz. ¡Disfruta mucho tu día!</p>
+      <div class="sign">Con cariño, ¡feliz cumple! 💕</div>
+      <button class="again" id="again">Volver a ver el sobre</button>
+    </section>
+    <div class="footer">Hecho con cariño y un toque de azúcar 🍓</div>
+  </main>
+<script>
+  const area = document.getElementById('envelopeArea');
+  const envelope = document.getElementById('envelope');
+  const card = document.getElementById('card');
+  const hint = document.getElementById('hint');
+  function openLetter() {
+    if (envelope.classList.contains('open')) return;
+    envelope.classList.add('open');
+    hint.textContent = '¡Tu cartita está lista! 💗';
+    setTimeout(() => card.classList.add('show'), 650);
+  }
+  area.addEventListener('click', openLetter);
+  area.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLetter(); }});
+  document.getElementById('again').addEventListener('click', () => {
+    card.classList.remove('show');
+    envelope.classList.remove('open');
+    hint.textContent = 'Toca el sobre para abrir tu sorpresa ✨';
+  });
+</script>
+</body>
+</html>
